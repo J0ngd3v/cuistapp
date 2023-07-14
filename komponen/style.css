@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Poppins:ital,wght@0,400;0,700;1,600&family=VT323&display=swap');
+body{
+    background-color:#191825;
+    font-family: 'Poppins', sans-serif;
+};
+
+nav {
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.19);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+}
