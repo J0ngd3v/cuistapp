@@ -43,7 +43,7 @@ if(isset($_POST['login'])){
     $checkUsername = "SELECT * FROM users WHERE username = '$username'";
     $checkResult = mysqli_query($conn, $checkUsername);
     if (mysqli_num_rows($checkResult) == 0) {
-        header("Location: login.php?login&code=error&msg=Invalid username or password");
+        header("Location: ../login.php?login&code=error&msg=Invalid username or password");
         exit;
     }
 
@@ -51,7 +51,7 @@ if(isset($_POST['login'])){
     $hashedPassword = $userData['password'];
 
     if (!password_verify($password, $hashedPassword)) {
-        header("Location: login.php?login&code=error&msg=Invalid username or password");
+        header("Location: ../login.php?login&code=error&msg=Invalid username or password");
         exit;
     }
 
@@ -59,7 +59,8 @@ if(isset($_POST['login'])){
     $_SESSION['id_user'] = $userData['id_user'];
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
-    header("Location: ../index.php");
+    $_SESSION['code'] = true;
+    header("Location: ../profile.php?code=success");
     exit;
 
 }
