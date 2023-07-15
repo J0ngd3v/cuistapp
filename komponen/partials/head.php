@@ -48,6 +48,9 @@
       box-shadow: none;
       border-color: transparent;
     }
+    p.count {
+    font-weight: bold;
+    }
   </style>
 </head>
 <body>
